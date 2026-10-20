@@ -38,11 +38,15 @@ for EXPECTED_THEME in monokai default; do
     fi
   done
 done
-for path in .netrwhist .viminfo example.swp example.swo example.swn example.un~ example~ undo/state; do
+for path in .netrwhist .viminfo example.swp example.swo example.swn \
+  .example.swm .example.swa .example.svz .example.saa \
+  nested/.example.swm nested/.example.saa example.un~ example~ undo/state; do
   git -C "$CONFIG_ROOT" check-ignore --no-index -q "$path"
 done
-if git -C "$CONFIG_ROOT" check-ignore --no-index -q colors/monokai.vim; then
-  echo 'The theme must not be ignored' >&2
-  exit 1
-fi
+for path in colors/monokai.vim diagram.svg query.sql movie.swf script.sh .config.json .example.swq; do
+  if git -C "$CONFIG_ROOT" check-ignore --no-index -q "$path"; then
+    printf 'Unrelated file must not be ignored: %s\n' "$path" >&2
+    exit 1
+  fi
+done
 printf '%s\n' 'Vim smoke tests passed (theme present/missing, truecolor matrix, options, filetypes, ignores).'
