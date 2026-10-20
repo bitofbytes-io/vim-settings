@@ -1,3 +1,7 @@
+Scope: This license covers Daniel Waters's original configuration,
+documentation, and tests. It does not cover colors/monokai.vim, a third-party
+colorscheme licensed under the upstream MIT license reproduced in NOTICE.md.
+
 MIT License
 
 Copyright (c) 2026 Daniel Waters

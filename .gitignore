@@ -1,0 +1,16 @@
+# Vim-generated history, swaps, backups, and persistent undo
+.netrwhist
+.viminfo
+.viminfo.tmp
+*.swp
+*.swo
+*.swn
+# Unix swap names are hidden; cover .swp down through .saa without ignoring
+# ordinary .svg, .sql, or .swf files. See :help swap-file / E326.
+.*.sw[a-p]
+.*.s[a-v][a-z]
+*~
+*.un~
+/undo/
+/backup/
+/swap/
