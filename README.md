@@ -47,7 +47,7 @@ printf 'Previous configuration saved in %s\n' "$backup"
 
 Start `vim`, or reload with `:source ~/.vimrc`. Use `:set paste` temporarily
 when pasting in terminals without bracketed paste, and `:set nopaste` afterward.
-The colorscheme attribution and unresolved original license are in [NOTICE.md](NOTICE.md).
+The colorscheme attribution, verified upstream source, and MIT license are in [NOTICE.md](NOTICE.md).
 
 ## Update and test
 
