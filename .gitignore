@@ -1,0 +1,12 @@
+# Vim-generated history, swaps, backups, and persistent undo
+.netrwhist
+.viminfo
+.viminfo.tmp
+*.swp
+*.swo
+*.swn
+*~
+*.un~
+/undo/
+/backup/
+/swap/

@@ -14,18 +14,27 @@ set incsearch	    		"" Searches for strings incrementally
  
 set autoindent	    		"" Auto-indent new lines
 set shiftwidth=4    		"" Number of auto-indent spaces
-set smartindent	    		"" Enable smart-indent
 set smarttab	    		"" Enable smart-tabs
 set softtabstop=4   		"" Number of spaces per Tab
  
+set tabstop=4
+set expandtab
+filetype plugin indent on
+
 " Advanced
 set ruler	    		"" Show row and column ruler information
  
 set undolevels=1000		"" Number of undo levels
 set backspace=indent,eol,start	"" Backspace behaviour
  
-set termguicolors
+if has('termguicolors')
+  set termguicolors
+endif
 
 syntax enable
-colorscheme monokai 
+try
+  colorscheme monokai
+catch /^Vim\%((\a\+)\)\=:E185/
+  colorscheme default
+endtry
 
