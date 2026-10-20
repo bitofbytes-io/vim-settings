@@ -28,7 +28,11 @@ set undolevels=1000		"" Number of undo levels
 set backspace=indent,eol,start	"" Backspace behaviour
  
 if has('termguicolors')
-  set termguicolors
+  if exists('g:vim_settings_truecolor')
+    let &termguicolors = g:vim_settings_truecolor
+  elseif has('gui_running') || $COLORTERM ==# 'truecolor' || $COLORTERM ==# '24bit'
+    set termguicolors
+  endif
 endif
 
 syntax enable
