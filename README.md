@@ -61,3 +61,5 @@ checks truecolor advertisement, overrides, and existing settings, asserts
 indentation/search settings and filetype support (including literal tabs in
 Make recipes), and checks ignore patterns. It never sources your personal Vim
 configuration.
+
+Contributions and suggestions are welcome via pull request.
